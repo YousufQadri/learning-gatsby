@@ -6,4 +6,8 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Gatsby Starter Project",
+    author: "Syed Yousuf Qadri",
+  },
 }

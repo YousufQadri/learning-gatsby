@@ -23,7 +23,7 @@ export default () => {
           return (
             <li>
               <h3>{edge.node.frontmatter.title}</h3>
-              <small>{edge.node.frontmatter.date}</small>
+              <small>Date: {edge.node.frontmatter.date}</small>
             </li>
           )
         })}

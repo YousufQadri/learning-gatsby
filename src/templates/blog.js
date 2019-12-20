@@ -8,14 +8,23 @@ export const query = graphql`
         title
         date
       }
-
       html
     }
   }
 `
 
 const Blog = props => {
-  return <div>This is blog template</div>
+  return (
+    <div>
+      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+      <p>
+        <u>Date:</u> {props.data.markdownRemark.frontmatter.date}
+      </p>
+      <div
+        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+      ></div>
+    </div>
+  )
 }
 
 export default Blog

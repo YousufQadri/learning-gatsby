@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Blog from "./blog/blog"
+import Blog from "../blog/blog"
 
 export default () => {
   const data = useStaticQuery(graphql`

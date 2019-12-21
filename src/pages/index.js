@@ -1,23 +1,14 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Blog from "../blog/blog"
-
-export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-  console.log(data.site.siteMetadata.title)
+import Layout from "../components/layout"
+import "../styles/index.scss"
+const IndexPage = () => {
   return (
-    <div>
-      <h3>{data.site.siteMetadata.title}</h3>
-      <h1>BLOGS</h1>
-      <Blog />
-    </div>
+    <Layout>
+      <h1>Hello.</h1>
+
+      <h2>I am Yousuf Qadri full stack developer</h2>
+    </Layout>
   )
 }
+
+export default IndexPage

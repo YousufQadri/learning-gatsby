@@ -6,7 +6,6 @@ module.exports.onCreateNode = ({ node, actions }) => {
   if (node.internal.type === "MarkdownRemark") {
     // console.log(JSON.stringify(node, undefined, 4))
     const slug = PATH.basename(node.fileAbsolutePath, ".md")
-    console.log("@@@@@@@@", slug)
     createNodeField({
       node,
       name: "slug",
@@ -21,7 +20,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const blogTemplate = PATH.resolve("./src/templates/blog.js")
   const res = await graphql(`
     query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      allContentfulBlogPost {
         edges {
           node {
             slug

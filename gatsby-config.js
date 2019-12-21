@@ -11,6 +11,7 @@ module.exports = {
     author: "Syed Yousuf Qadri",
   },
   plugins: [
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-source-filesystem`,
       options: {

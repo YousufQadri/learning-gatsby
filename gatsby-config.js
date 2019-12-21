@@ -11,6 +11,7 @@ module.exports = {
     author: "Syed Yousuf Qadri",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
       options: {
